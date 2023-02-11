@@ -32,12 +32,15 @@
 
 //
 // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
-let firstName = 'Roman';
-let middleName = 'Ihorovych';
-let lastName = 'Kutnyi';
-
-let person = `${firstName}  ${middleName}  ${lastName}`
-console.log(person)
+// let firstName = 'Roman';
+// let middleName = 'Ihorovych';
+// let lastName = 'Kutnyi';
+//
+// let person = `${firstName}  ${middleName}  ${lastName}`
+// console.log(person)
+//
+// let person1 = firstName + ' ' + middleName + ' ' + ' ' + lastName  // конкатинація
+// console.log(person1)
 
 
 
@@ -58,6 +61,15 @@ console.log(person)
 // Додаткове для тих хто цікавився prompt`oм
 // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 
-prompt('прошу ввести Ваше імя')
-prompt('прошу ввести Ваше по-батькові')
-prompt('прошу ввести Ваше прізвище')
+let firstName2 = prompt('прошу ввести Ваше імя');
+let middleName2 = prompt('прошу ввести Ваше по-батькові');
+// let age2 = prompt('прошу ввести Ваш вік');
+//
+// let age2 = +prompt('прошу ввести Ваш вік');  // + переводить в число
+let age2 = parseInt('прошу ввести Ваш вік');  // + переводить в число
+console.log(age2)
+
+let res = `${firstName2} ${middleName2} ${age2}`
+console.log(res)
+
+
