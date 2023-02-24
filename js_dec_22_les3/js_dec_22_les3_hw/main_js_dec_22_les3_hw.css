@@ -1,0 +1,21 @@
+.main_div {
+    display: flex;
+}
+
+
+.product_card {
+    width: 200px;
+    height: 500px;
+    background:  red;
+    border: aqua solid 3px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+.product_image {
+    width: 80%;
+    /*height: 20px;*/
+}
