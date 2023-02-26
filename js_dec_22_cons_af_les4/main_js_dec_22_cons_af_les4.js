@@ -52,20 +52,44 @@
 
 
 //  // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-let array = ['str', 1, 55, true, [1, 5, -25]]
+// let array = ['str', 1, 55, true, [1, 5, -25]]
+//
+// function fun (arr) {
+//     document.write(`<ul>`)
+//
+//     for (const item of arr) {
+//         document.write(`<li> ${item} </li>`)
+//     }
+//     document.write(`</ul>`)
+// }
+//
+// fun(array)
 
-function fun (arr) {
-    document.write(`<ul>`)
+function foo (name, age) {
+    let user = {name, age};
+    console.log(user)
+    let x = 0;
 
-    for (const item of arr) {
-        document.write(`<li> ${item} </li>`)
+    return{
+        getName() {
+            return user.name;
+        },
+        getAge() {
+            return user.age
+        },
+        countX() {
+            return ++x;
+        }
     }
-    document.write(`</ul>`)
 }
 
-fun(array)
+// console.log(foo('vasyl', 33))
+let foo1 = (foo('vasyl', 33));
 
+console.log(foo1.getName());
+console.log(foo1.getAge());
+console.log(foo1.countX())
+console.log(foo1.countX())
+console.log(foo1.countX())
 
-
-
-// 18.50
+// 57,36
