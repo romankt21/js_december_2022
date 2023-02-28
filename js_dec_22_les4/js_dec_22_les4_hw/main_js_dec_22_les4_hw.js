@@ -3,7 +3,7 @@
 //     return  a * b
 // }
 // console.log(rectangle(5, 2));
-// 23,08
+
 
 //  // - створити функцію яка обчислює та повертає площу кола з радіусом r
 // function circle (r) {
@@ -16,7 +16,7 @@
 // // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 // function cylinder(r, h) {
 //     const pi = 3.14;
-//     return pi * r * r * h
+//     return 2*pi * r * (r + h)
 // }
 //
 // console.log(cylinder(3,4))
@@ -24,8 +24,8 @@
 //  // - створити функцію яка приймає масив та виводить кожен його елемент
 // let arr = [1, 0, true, 'str', [4, -5, 8]];
 // function array (arra) {
-//     for (let i = 0; i < arguments.length; i++) {
-//         const item = arguments[i];
+//        for (const item of arra) {
+//
 //     document.write(`<ul>`)
 //     document.write(`<li> ${item} </li>`)
 //     document.write(` </ul> `)
@@ -59,38 +59,34 @@
 
 // //- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
 // //Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
-// function foo (number, text){
-//     for (let i = 0; i < number.length; i++) {
-//         const item = number[i];
+// function foo (text, number){
 //
+//         document.write(`<ul>`);
+//
+//     for (let i = 0; i < number; i++) {
+//         document.write(`<li>${text}</li>`);
 //     }
-//         document.write(`<div>`);
 //
-//     document.write(`<li>${text}</li>`);
-//     document.write(`<li>${text}</li>`);
-//     document.write(`<li>${text}</li>`);
 //
-//     document.write(`</div>`);
+//     document.write(`</ul>`);
 // }
-// foo(3, 'hello')
+// foo('hello', 3)
 
 
 
 // //- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 // let array = [1, 'str', true, [1, 3, -5]];
-// function foo (arr) {
-//     for (let i = 0; i < arr.length; i++) {
-//         const item = arr[i];
+// function listCreator (arr) {
 //         document.write(`<ul>`);
-//
+//     for (const item of arr) {
 //         document.write(`<li>${item}</li>`);
-//
-//         document.write(`</ul>`);
 //     }
 //
-// }
+//         document.write(`</ul>`);
+//   }
 //
-// foo(array);
+// listCreator(array);
+
 
 
 // //- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
@@ -110,35 +106,44 @@
 
 // //- створити функцію яка повертає найменьше число з масиву
 // не вийшло
-// let array = [2, 5, 25,1, 0 ,-15];
+// let array = [2, 5, 25, -5,  1, 0 ,-15];
+// function minNum (numbers) {
+//     let min = numbers[0];  // берем перше число масиву
 //
-// function foo (arr) {
-//     let max = 0;
+//     for (const item of numbers) {
 //
 //
 //
-//     for (let i = 0; i < arr.length; i++) {
-//         const item = arr[i];
-//         console.log(item)
-//         if (item > max){
-//            max = item
+//         if (item < min) {
+//             min = item
 //         }
-//             return item
+//
 //     }
+//     return min
 // }
 //
-// console.log(foo(array));
+// console.log(minNum(array));
+//
 
+
+//52.57
 
 
 // - створити функцію sum(arr)яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
-let array = [1, 2, 10];
+let arraySum = [1, 2, 10];
 function sum (arr) {
-    for (let i = 0; i < arr.length; i++) {
-        const arrElement = arr[i];
+
+    let basket = 0;
+    for (const item of arr) {
+        basket  +=  item  //   basket  = basket + item
 
     }
+    return basket
 }
+
+console.log(sum(arraySum))
+
+// 1/00/57
 
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
