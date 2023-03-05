@@ -101,7 +101,7 @@
 //        document.write(`</ul>`)
 // }
 // threeElem2('january',3)
-
+//
 
 // звичайна ф-ція
 // function foo (text, number){
@@ -162,6 +162,7 @@
 // }
 // arrayName(arr)
 
+// звичайна ф-ція
 
 // let arr = [
 //     { id: 1, name: 'vasyl', age: 30},
@@ -282,14 +283,23 @@
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
-let exchange =(sumUAH,currencyValues,exchangeCurrency) => {
-    let number = sumUAH / exchangeCurrency
-
-    console.log(`${number}  ${currencyValues}`)
-}
-
-exchange(10000, 'USD', 40);
-exchange(10000, 'EUR', 42);
+// let exchange =(sumUAH,currencyValues,exchangeCurrency) => {
+//     for (const item of currencyValues) {
+//         if (item.currency === exchangeCurrency){
+//            return sumUAH / exchangeCurrency
+//         }
+//     }
+//
+//
+//
+// }
+//
+// console.log(exchange(10000,
+//     [
+//         {currency:'USD',value:40},
+//         {currency:'EUR',value:42}
+//     ],
+//     'EUR'))
 
 // звичайна функція
 
@@ -302,11 +312,39 @@ exchange(10000, 'EUR', 42);
 //
 //
 // }
+//
+// console.log(exchange(10000,
+//     [
+//         {currency:'USD',value:40},
+//         {currency:'EUR',value:42}
+//     ],
+//     'EUR'))
+//
+//
+
+
+// створити функцію, яка приймає будь яку кількість чисел, повертає найменше, а виводить найбільше (Math заборонено використовувати)
+
+let maxMin = (...array) => {
+    let min =array[0]
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+           max = array[i]
+        }
+        if (min > array[i]) {
+            min = array[i]
+        }
 
 
 
+    }
+    console.log(max)
+    return min
 
-
+}
+let min = maxMin(1, 25, 358, -145, 0);
+console.log(min)
 
 
 
