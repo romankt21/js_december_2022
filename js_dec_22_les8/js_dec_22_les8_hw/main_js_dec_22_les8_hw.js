@@ -103,45 +103,151 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-function Car(model, producer, year, speed, engine) {
+// function Cars(model, producer, year, maxSpeed, engine) {
+//     this.model = model;
+//     this.producer = producer;
+//     this.year = year;
+//     this.maxSpeed = maxSpeed;
+//     this.engine = engine;
+//
+//
+//
+//     this.drive = function () {
+//         console.log(`їдемо зі швидкістю ${this.speed}`)
+//     };
+//
+//     this.info = function () {
+//         for (const carKey in this) {
+//             if (typeof this[carKey] !== 'function') {
+//                 console.log(`${carKey} - ${this[carKey]}`);
+//             }
+//         }
+//     }
+//
+//     this.increaseMaxSpeed = function (newSpeed) {
+//         maxSpeed  += newSpeed
+//         console.log(`new speed - ${maxSpeed}`)
+//     }
+//
+//     this.changeYear = function (newValue) {
+//         year += newValue
+//         console.log(`new year - ${year}`)
+//     }
+//
+//     this.addDriver = function (driver) {
+//         console.log(driver)
+//     }
+//
+// }
+//
+// let cars = new Cars('slavuta', 'zaz', 2003, 115, 1.2 );
+//     // new Car('grandscienic', 'renault', 2010, 150, 1.5 )
+// console.log(cars)
+// cars.drive();
+// cars.info();
+// cars.increaseMaxSpeed(50);
+// cars.changeYear(-20);
+// cars.addDriver({name: 'andriy', age: 25})
+
+
+
+class Cars {
+    constructor(model, producer, year, maxSpeed, engine) {
     this.model = model;
     this.producer = producer;
     this.year = year;
-    this.speed = speed;
+    this.maxSpeed = maxSpeed;
     this.engine = engine;
+    }
 
-    this.drive = function () {
-        console.log(`їдемо зі швидкістю ${speed}`)
+    drive  () {
+        console.log(`їдемо зі швидкістю ${this.speed}`)
     };
 
-    this.info = function () {
-        console.log(`model: {model}`)
+    info () {
+        for (const carKey in this) {
+            if (typeof this[carKey] !== 'function') {
+                console.log(`${carKey} - ${this[carKey]}`);
+            }
+        }
+    }
+
+    increaseMaxSpeed  (newSpeed) {
+        this.maxSpeed  += newSpeed
+        console.log(`new speed - ${this.maxSpeed}`)
+    }
+
+    changeYear  (newValue) {
+        this.year += newValue
+        console.log(`new year - ${this.year}`)
+    }
+
+    addDriver  (driver) {
+        this.driver = driver
+        console.log(driver)
     }
 
 }
 
-let cars = [
-    new Car('slavuta', 'zaz', 2003, 115, 1.2 ),
-    new Car('grandscienic', 'renault', 2010, 150, 1.5 )
-]
-
+let cars = new Cars('slavuta', 'zaz', 2003, 115, 1.2 );
+// new Car('grandscienic', 'renault', 2010, 150, 1.5 )
 console.log(cars)
+cars.drive();
+cars.info();
+cars.increaseMaxSpeed(50);
+cars.changeYear(-20);
+cars.addDriver({name: 'andriy', age: 25})
+
+
+
+// class Car {
+//     constructor(model, producer, year, maxSpeed, carEngine) {
+//         this.model = model;
+//         this.producer = producer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.carEngine = carEngine;
+//     }
 //
-// // створити пустий масив, наповнити його 10 об'єктами new User(....)
-// let users = [
-//     new User('mykola', 'mykolyshyn', 'myk', 123),
-//     new User( 'petro', 'petrenko', 'pet', 234),
-//     new User( 'ivan', 'ivanenko', 'iv', 345),
-//     new User( 'vasyl', 'vasylenko', 'vas', 456),
-//     new User( 'andriy', 'andriyenko', 'and', 567),
-//     new User( 'zoriana', 'zorin', 'zor', 678),
-//     new User( 'lesia', 'lesko', 'les', 789),
-//     new User( 'oksana', 'oksan', 'oks', 890),
-//     new User( 'olena', 'olench', 'olen', 901),
-//     new User( 'vira', 'vira', 'vir', 112)
-// ]
-// console.log('*****');
-// console.log(users)
+//
+//     engine() {
+//         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+//     }
+//
+//     info() {
+//         for (const carKey in this) {
+//             if (typeof this[carKey] !== 'function') {
+//                 console.log(`${carKey} -- ${this[carKey]}`);
+//             }
+//         }
+//     }
+//
+//     increaseMaxSpeed(newSpeed) {
+//         this.maxSpeed += newSpeed;
+//     }
+//
+//     changeYear(newValue) {
+//         this.year = newValue;
+//     }
+//
+//     addDriver(driver) {
+//         this.driver = driver;
+//     }
+// }
+//
+// const car = new Car('Toyota', 'Japan', '2000', 200, 3.4);
+// console.log(car);
+// car.engine();
+// car.info();
+// car.increaseMaxSpeed(50);
+// car.changeYear(2020);
+// car.addDriver({name: 'Vasya'});
+// console.log(car);
+
+
+
+
+
 
 
 
