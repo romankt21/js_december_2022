@@ -1,12 +1,15 @@
 let url = new URL(location.href);
 let json = url.searchParams.get('data');
-let post = JSON.parse(json);
-console.log(post);
+let user = JSON.parse(json);
+console.log(user);
 
 let divUserDetails = document.createElement('div');
 document.body.appendChild(divUserDetails);
-divUserDetails.innerText = `${JSON.stringify(post)}`
+divUserDetails.innerText = `${json}`
 
-let divUD = document.createElement('div');
-document.body.appendChild(divUD);
-divUD.innerText = `${json}`
+let button = document.createElement('button');
+button.innerText = 'posts';
+
+button.onclick = () => `{location.href =./post-details.html?data=${JSON.stringify(postItem)}}`;
+divUserDetails.appendChild(button)
+
